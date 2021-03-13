@@ -1,0 +1,70 @@
+<section>
+  <ng-container>
+    <mat-carousel
+      timings="250ms ease-in"
+      [autoplay]="true"
+      interval="5000"
+      color="white"
+      maxWidth="100%"
+      slides="2"
+      [loop]="true"
+      [hideArrows]="true"
+      [hideIndicators]="false"
+      [useKeyboard]="true"
+      [useMouseWheel]="false"
+      slideHeight="30%"
+      maintainAspectRatio="true"
+      proportion="55"
+      orientation="ltr">
+      <mat-carousel-slide
+        #matCarouselSlide
+        *ngFor="let slide of data; let i = index"
+        [image]="slide.coverimg"
+        overlayColor="#00000040"
+        [hideOverlay]="false">
+        <div style="margin: auto;width: 50%;padding: 10px;">
+          <!--          <h1 align="centre" style="background-color:#ffffff; padding: 10px;text-align: center;">Slide Number {{ i+1 }}</h1>-->
+        </div>
+      </mat-carousel-slide>
+    </mat-carousel>
+  </ng-container>
+</section>
+<section>
+  <div fxHide.lt-md style="background: rgba(0, 0, 0, 10);">
+    <h2 [class.sect-pry]="true" style="padding-top: 100px;">Women's Ministry</h2>
+    <mat-card-content class="mat-card-content">
+      <div class="containerX" style="flex-direction: row; box-sizing: border-box; display: flex;color: white">
+        <div class="coloredContainerX box" fxflex="" fxlayout="row" fxlayout.sm="column" fxlayout.xs="column" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 0%;">
+          <div fxflex="" style="flex: 1 1 0%; box-sizing: border-box;" [class.sect-prydec]="true">
+            <p> Remember your creator in the days of your youth.. (Eccl 12.1) In this day and age when the world offers so much to entice an mislead the young people, our Creator's clarion call rings clear </p>
+            <p style="text-align: left; padding-top: 24px;">
+              Our vision for youth ministry is to bring young people togethe with Christ as the central focus. Our desire is that our youth growth in faith and in their personal relationship with Jesus. They are challenged to seek Him for all the hard questions of life and to opply scriptural principles in their daily lives thereby being better equipped to serve the King of Kings.
+            </p>
+            <p style="text-align: left; padding-top: 24px;">
+              They are also encouraged to serve in meaningful ways in the church and the world and to use their gifts to the glory of God. The youth join in worship, service, outreach and fellowship.
+            </p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </div>
+
+  <div fxHide.gt-sm fxShow.lt-md style="background: rgba(0, 0, 0, 10);">
+    <h2 [class.sect-pry]="true" style="padding-top: 100px;">Women's Ministry</h2>
+    <mat-card-content class="mat-card-content">
+      <div class="containerX" style="flex-direction: row; box-sizing: border-box; display: flex;color: white">
+        <div class="coloredContainerX box" fxflex="" fxlayout="row" fxlayout.sm="column" fxlayout.xs="column" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 0%;">
+          <div fxflex="" style="flex: 1 1 0%; box-sizing: border-box;" [class.sect-prydec]="true">
+            <p> Remember your creator in the days of your youth.. (Eccl 12.1) In this day and age when the world offers so much to entice an mislead the young people, our Creator's clarion call rings clear </p>
+            <p style="text-align: left; padding-top: 24px;">
+              Our vision for youth ministry is to bring young people togethe with Christ as the central focus. Our desire is that our youth growth in faith and in their personal relationship with Jesus. They are challenged to seek Him for all the hard questions of life and to opply scriptural principles in their daily lives thereby being better equipped to serve the King of Kings.
+            </p>
+            <p style="text-align: left; padding-top: 24px;">
+              They are also encouraged to serve in meaningful ways in the church and the world and to use their gifts to the glory of God. The youth join in worship, service, outreach and fellowship.
+            </p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </div>
+</section>

@@ -1,0 +1,111 @@
+<section>
+  <ng-container>
+    <mat-carousel
+      timings="250ms ease-in"
+      [autoplay]="true"
+      interval="5000"
+      color="white"
+      maxWidth="100%"
+      slides="2"
+      [loop]="true"
+      [hideArrows]="true"
+      [hideIndicators]="false"
+      [useKeyboard]="true"
+      [useMouseWheel]="false"
+      slideHeight="100%"
+      maintainAspectRatio="true"
+      proportion="55"
+      orientation="ltr">
+      <mat-carousel-slide
+        #matCarouselSlide
+        *ngFor="let slide of slides; let i = index"
+        [image]="slide.image"
+        overlayColor="#00000040"
+        [hideOverlay]="false">
+      </mat-carousel-slide>
+    </mat-carousel>
+  </ng-container>
+</section>
+
+
+<section>
+  <ng-container>
+  <p [class.mt-font]="true" align="left">Watch</p>
+  <p [class.mt-conttentfont]="true" align="left">Latest Sermons, Music & much more..</p>
+  <div fxLayout="row wrap" fxLayout.xs="column"  fxLayout.sm="column" fxLayoutGap="16px" style="margin:24px;">
+    <div fxFlex="31.5%" fxLayoutAlign="stretch flex-start" *ngFor="let o of data let i=index let isLast = last">
+      <mat-grid-list cols="1" rowHeight="1:1">
+      <a href="https://www.youtube.com/watch?v={{o.id}}" style="text-decoration: none;" >
+          <mat-card mat-ripple style="height: 90% !important;position: relative;overflow: hidden;">
+            <img mat-card-image src="https://i.ytimg.com/vi_webp/{{o.id}}/maxresdefault.webp" alt="{{o.title}}">
+            <mat-card-content>
+              <p [class.text-container]="true" >{{o.title}}</p>
+            </mat-card-content>
+          </mat-card>
+      </a>
+        <div *ngIf="isLast">
+          <div class="flex-item"
+               fxFlex fxLayoutAlign="end start" style="margin-top: 2%; padding-left: 5%;">
+            <button fxLayoutAlign="end start" mat-button >
+              <div fxFlex end></div>
+              View More
+              <mat-icon align="right" style="margin-top: 5%; padding-left: 5%;">east</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-grid-list>
+    </div>
+  </div>
+  </ng-container>
+</section>
+
+
+<section>
+  <ng-container>
+    <div style="background: rgba(0, 0, 0, 10);">
+      <h2 [class.sect-pry]="true" style="padding-top: 180px;">Power In Prayer</h2>
+      <mat-card-content class="mat-card-content">
+        <div class="containerX" style="flex-direction: row; box-sizing: border-box; display: flex;color: white">
+          <div class="coloredContainerX box" fxflex="" fxlayout="row" fxlayout.sm="column" fxlayout.xs="column" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 0%;">
+            <div fxflex="" style="flex: 1 1 0%; box-sizing: border-box;" [class.sect-prydec]="true"> We get to communicate with our Lord, cry out to Him all of our Sufferings, fears and burdens; Romans 12:10-13 Be kindly affectionate to one another with brotherly love, in honor giving preference to one another; not lagging in diligence, fervent in spirit, serving the Lord; rejoicing in hope patient in tribulation, continuing steadfastly in prayer; distributing to the needs of the saints, given to hospitality.
+              </div>
+            </div>
+        </div>
+      </mat-card-content>
+    </div>
+  </ng-container>
+</section>
+
+<section>
+  <ng-container>
+    <p [class.mt2-font]="true" align="left">About</p>
+    <p [class.mt-conttentfont]="true" align="left">Church & Ministry</p>
+    <div fxLayout="row wrap" fxLayout.xs="column"  fxLayout.sm="column" fxLayoutGap="16px" style="margin:24px;">
+      <div fxFlex="31.5%" fxLayoutAlign="stretch flex-start" *ngFor="let o of homedata let i=index let isLast = last">
+        <mat-grid-list cols="1" rowHeight="1:1">
+          <a [routerLink]="o.link" style="text-decoration: none;" >
+            <mat-card mat-ripple style="height: 90% !important;position: relative;overflow: hidden;">
+              <img mat-card-image src="{{o.coverimg}}">
+              <mat-card-content>
+                <p [class.htext-container]="true" >{{o.title}}</p>
+                <p [class.text-container]="true" >{{o.description}}</p>
+              </mat-card-content>
+            </mat-card>
+          </a>
+          <div *ngIf="isLast">
+            <div class="flex-item"
+                 fxFlex fxLayoutAlign="end start" style="margin-top: 2%; padding-left: 5%;">
+              <button fxLayoutAlign="end start" mat-button >
+                <div fxFlex end></div>
+                Learn More
+                <mat-icon align="right" style="margin-top: 5%; padding-left: 5%;">east</mat-icon>
+              </button>
+            </div>
+          </div>
+        </mat-grid-list>
+      </div>
+    </div>
+  </ng-container>
+</section>
+
+
