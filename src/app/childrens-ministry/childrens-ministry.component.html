@@ -1,1 +1,103 @@
-<p>childrens-ministry works!</p>
+<section>
+  <ng-container>
+    <mat-carousel
+      timings="250ms ease-in"
+      [autoplay]="true"
+      interval="5000"
+      color="white"
+      maxWidth="100%"
+      slides="2"
+      [loop]="true"
+      [hideArrows]="true"
+      [hideIndicators]="false"
+      [useKeyboard]="true"
+      [useMouseWheel]="false"
+      slideHeight="30%"
+      maintainAspectRatio="true"
+      proportion="55"
+      orientation="ltr">
+      <mat-carousel-slide
+        #matCarouselSlide
+        *ngFor="let slide of data; let i = index"
+        [image]="slide.coverimg"
+        overlayColor="#00000040"
+        [hideOverlay]="false">
+        <div style="margin: auto;width: 50%;padding: 10px;">
+          <!--          <h1 align="centre" style="background-color:#ffffff; padding: 10px;text-align: center;">Slide Number {{ i+1 }}</h1>-->
+        </div>
+      </mat-carousel-slide>
+    </mat-carousel>
+  </ng-container>
+</section>
+<section>
+  <div fxHide.lt-md style="background: rgba(0, 0, 0, 10);">
+    <h2 [class.sect-pry]="true" style="padding-top: 100px;">Children's Ministry</h2>
+    <mat-card-content class="mat-card-content">
+      <div class="containerX" style="flex-direction: row; box-sizing: border-box; display: flex;color: white">
+        <div class="coloredContainerX box" fxflex="" fxlayout="row" fxlayout.sm="column" fxlayout.xs="column" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 0%;">
+          <div fxflex="" style="flex: 1 1 0%; box-sizing: border-box;" [class.sect-prydec]="true">
+            <p>'Let the children come to me and do not stop them, because the
+              Kingdom of heaven belongs to them. '(Matt 19:14)
+              We are passionate about helping your children know Jesus Christ
+              as their Savior and teach them to love our loying and living God
+              with all of their heart with all of their sowl, and with all of their strength,
+              We are commilted teachers who volunteer with dedication to build
+              their faith and establish toundations to make sure that your kids
+              cultivate their relationship with Jesus;</p>
+            <p style="text-align: left; padding-top: 24px;">
+              Our goal is to prepare this new generation for the Kingdom of God
+              and teach them the fear of God. This is achieved by grouping the
+              kids in their age groups,between 3 to 6 as beginners 7 to 12 who
+              are juniors and 13 to 16 in the intermediates. The kids will go through
+              complete 3 years study courses under eoch of their age grous and
+              ear to build their relationship with God.</p>
+            <p style="text-align: left; padding-top: 24px;">
+
+              They also enjoy fellowship with each other and participate
+              in variousspecial events as and when orgonised for special occosions.
+              They are part of the praise and worship with the church during the
+              initial stant of the church service and later are disbursed to join the
+              children ministry while the word is shared for adults in the church.
+              Timings - 8.30 AM to 9.00 AM and 4pm to 5.30pm on Sundays</p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </div>
+
+  <div fxHide.gt-sm fxShow.lt-md style="background: rgba(0, 0, 0, 10);">
+    <h2 [class.sect-pry]="true" style="padding-top: 100px;">Children's Ministry</h2>
+    <mat-card-content class="mat-card-content">
+      <div class="containerX" style="flex-direction: row; box-sizing: border-box; display: flex;color: white">
+        <div class="coloredContainerX box" fxflex="" fxlayout="row" fxlayout.sm="column" fxlayout.xs="column" style="flex-direction: column; box-sizing: border-box; display: flex; flex: 1 1 0%;">
+          <div fxflex="" style="flex: 1 1 0%; box-sizing: border-box;" [class.sect-prydec]="true">
+            <p>'Let the children come to me and do not stop them, because the
+              Kingdom of heaven belongs to them. '(Matt 19:14)
+              We are passionate about helping your children know Jesus Christ
+              as their Savior and teach them to love our loying and living God
+              with all of their heart with all of their sowl, and with all of their strength,
+              We are commilted teachers who volunteer with dedication to build
+              their faith and establish toundations to make sure that your kids
+              cultivate their relationship with Jesus;</p>
+            <p style="text-align: left; padding-top: 24px;">
+              Our goal is to prepare this new generation for the Kingdom of God
+              and teach them the fear of God. This is achieved by grouping the
+              kids in their age groups,between 3 to 6 as beginners 7 to 12 who
+              are juniors and 13 to 16 in the intermediates. The kids will go through
+              complete 3 years study courses under eoch of their age grous and
+              ear to build their relationship with God.</p>
+            <p style="text-align: left; padding-top: 24px;">
+
+              They also enjoy fellowship with each other and participate
+              in variousspecial events as and when orgonised for special occosions.
+              They are part of the praise and worship with the church during the
+              initial stant of the church service and later are disbursed to join the
+              children ministry while the word is shared for adults in the church.
+              Timings - 8.30 AM to 9.00 AM and 4pm to 5.30pm on Sundays
+            </p>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </div>
+</section>

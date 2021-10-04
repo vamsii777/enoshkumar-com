@@ -27,7 +27,7 @@ export const ModulesList = [
 
   {
     label: 'Ministry',
-    routelink: '/music',
+    routelink: '/',
     children: [{
       label: 'Youth Ministry',
       routelink: '/youth-ministry'
@@ -36,15 +36,15 @@ export const ModulesList = [
       routelink: '/womens-ministry'
     }, {
       label: 'Children\'s Ministry',
-      routelink: '/about'
+      routelink: '/childrens-ministry'
     }],
   },
   {
     label: 'About',
-    routelink: '/music',
+    routelink: '/about',
     children: [{
       label: 'Cell Church',
-      routelink: '/music'
+      routelink: '/cell-church'
     }],
   }
     ];

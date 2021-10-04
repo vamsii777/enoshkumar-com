@@ -12,7 +12,7 @@
       [hideIndicators]="false"
       [useKeyboard]="true"
       [useMouseWheel]="false"
-      slideHeight="100%"
+      slideHeight="50%"
       maintainAspectRatio="true"
       proportion="55"
       orientation="ltr">
@@ -107,5 +107,133 @@
     </div>
   </ng-container>
 </section>
+
+<section>
+
+  <p [class.mt2-font]="true" align="left">FAQs</p>
+  <p [class.mt-conttentfont]="true" align="left"></p>
+  <div style="padding-top:  14px; padding-bottom: 24px;">
+    <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description style="font-family: Poppins; color: black">
+          How many services are there?
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>We run 4 services at different locations.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description style="font-family: Poppins; color: black">
+          What are church service timings?
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p [class.accordp]="true">1st - 6am To 9am </p>
+      <p [class.accordp]="true">2nd - 9:30am To 12:30pm</p>
+      <p [class.accordp]="true">3rd - 11:30am To 1:30pm</p>
+      <p [class.accordp]="true">4th - 4pm To 6pm</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description style="font-family: Poppins; color: black">
+          Is there an all night prayer service?
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p [class.accordp]="true">Yes! there's the all night prayer service every month second saturday.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description style="font-family: Poppins; color: black">
+          When's the womens gatherning?
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p [class.accordp]="true">Everyday 10am To 12:30pm</p>
+      <p [class.accordp]="true">EveryFriday 11am To 1pm</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description style="font-family: Poppins; color: black">
+          When's the youth conference?
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p [class.accordp]="true">Yes! We do so once a month on a public holiday 10am to 4pm (lunch follows)</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-description style="font-family: Poppins; color: black">
+          When's the men's gatherning?
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p [class.accordp]="true">EveryThursday 10am To 12:30pm</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  </div>
+
+</section>
+
+
+
+<!-- oscuratore -->
+<div class="dialog_scrim" *ngIf="openMenu">
+</div>
+
+<button mat-fab color="accent" (click)="clickMenu()"
+        class="menu-button"
+        [class.mat-elevation-z2]="!isOver"
+        [class.mat-elevation-z8]="isOver"
+        (mouseover)="isOver = true"
+        (mouseleave)="isOver = false">
+  <mat-icon class="material-icons" *ngIf="!openMenu" svgIcon="heart"></mat-icon>
+  <i class="material-icons" *ngIf="openMenu">close</i>
+</button>
+
+<!--<button class="extended-fab-button" mat-fab color="primary">-->
+<!--  <mat-icon>speaker_notes</mat-icon>-->
+<!--  <span class="extended-fab-button__text">Notes</span>-->
+<!--</button>-->
+
+<!-- menu button -->
+<button mat-mini-fab
+        class="action-button one mat-elevation-z8"
+        *ngIf="openMenu"
+        color="basic"
+        (click)="openDialog()">
+  <mat-icon class="material-icons" svgIcon="coin2"></mat-icon>
+</button>
+
+<button mat-raised-button
+        class="label labelone mat-elevation-z8 "
+        *ngIf="openMenu"
+        color="basic"
+        (click)="openDialog()">
+  David Paul Foundation
+</button>
+
+<button mat-mini-fab
+        class="action-button two mat-elevation-z8"
+        *ngIf="openMenu"
+        color="basic"
+        (click)="openDialog()">
+  <mat-icon class="material-icons" svgIcon="coin2"></mat-icon>
+</button>
+<button mat-raised-button
+        class="label labeltwo mat-elevation-z8"
+        *ngIf="openMenu"
+        color="basic"
+        (click)="openDialog()">
+  Humble Offerings
+</button>
 
 

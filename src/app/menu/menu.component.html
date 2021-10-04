@@ -3,21 +3,17 @@
     <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
       <mat-icon>menu</mat-icon>
     </button>
-    <span [class.toolbar-font]="true" >Enosh Kumar</span>
+    <a routerLink="/" style="text-decoration: none;color: black"><span [class.toolbar-font]="true" >Enosh Kumar</span></a>
     <span class="menu-spacer"></span>
     <a fxShow="true" fxHide.lt-md routerLink = "/home" style="padding-top: 1.3px" [class.mat-btn]="true" mat-button>Home</a>
-
     <div [class.mat-btn]="true" fxShow="true" fxHide.lt-md>
-
     <ng-container [class.mat-btn]="true" *ngFor="let menuItem of modulesList">
-
       <ng-container *ngIf="!menuItem.children" [routerLink]="menuItem.routelink">
         <a class="nav-link" [routerLink]="menuItem.routelink">
           <span class="icon fa" [ngClass]="menuItem.icon"></span>
           <span [class.mat-btn]="true" class="text-holder">{{menuItem.label}}</span>
         </a>
       </ng-container>
-
       <ng-container *ngIf="menuItem.children.length > 0">
         <button [routerLink]="menuItem.routelink" #button mat-button [matMenuTriggerFor]="levelOne" #levelOneTrigger="matMenuTrigger" (mouseenter)="buttonEnter(levelOneTrigger)" (mouseleave)="buttonLeave(levelOneTrigger, button)" style="z-index:1050">
           <span class="icon fa" [ngClass]="menuItem.icon"></span>
@@ -25,10 +21,8 @@
             <i class="fa fa-chevron-down"></i>
       </span>
         </button>
-
         <mat-menu #levelOne="matMenu" direction="down" yPosition="below">
       <span (mouseenter)="menuenter()" (mouseleave)="menuLeave(levelOneTrigger, button)">
-
       <ng-container *ngFor="let childL1 of menuItem.children">
         <li [routerLink]="childL1.routelink" [class.mat-btn]="true" class="p-0" *ngIf="!childL1.children" mat-menu-item>
           <a [class.mat-btn]="true" >{{childL1.label}}
@@ -40,7 +34,6 @@
             <span class="icon fa" [ngClass]="childL1.icon"></span>
             <span [class.mat-btn]="true" >{{childL1.label}}</span>
           </li>
-
           <mat-menu #levelTwo="matMenu">
             <span (mouseenter)="menu2enter()" (mouseleave)="menu2Leave(levelOneTrigger,levelTwoTrigger, button)">
             <ng-container *ngFor="let childL2 of childL1.children">
@@ -57,13 +50,9 @@
       </span>
         </mat-menu>
       </ng-container>
-
     </ng-container>
     </div>
     <a fxShow="true" fxHide.lt-md routerLink = "/contact" style="padding-top: 1px; margin-bottom: 1px;" [class.mat-btn]="true" mat-button>Contact</a>
-
-
-
     <span class="spacer"></span>
     <button mat-icon-button>
       <mat-icon svgIcon="youtube"></mat-icon>
@@ -90,10 +79,10 @@
       </a>
       <mat-nav-list class="sidenav-submenu" *ngIf="showMenu">
         <a routerLink = "/youth-ministry" [class.mat-btn]="true" mat-list-item>Youth Ministry</a>
-        <a [class.mat-btn]="true" mat-list-item>Children's Ministry</a>
-        <a [class.mat-btn]="true" mat-list-item>Women's Ministry</a>
+        <a [class.mat-btn]="true"  routerLink = "/childrens-ministry" mat-list-item>Children's Ministry</a>
+        <a [class.mat-btn]="true" routerLink = "/womens-ministry" mat-list-item>Women's Ministry</a>
       </mat-nav-list>
-      <a mat-list-item (click)="toggleMenu2()" [class.mat-btn]="true">About
+      <a mat-list-item routerLink = "/about" (click)="toggleMenu2()" [class.mat-btn]="true">About
         <mat-icon *ngIf="!showMenu2">chevron_right</mat-icon>
         <mat-icon *ngIf="showMenu2">expand_more</mat-icon>
       </a>
@@ -102,7 +91,7 @@
 
     </mat-nav-list>
     <mat-nav-list class="sidenav-submenu" *ngIf="showMenu2">
-      <a [class.mat-btn]="true" mat-list-item>Cell Church</a>
+      <a [class.mat-btn]="true" routerLink = "/cell-church" mat-list-item>Cell Church</a>
     </mat-nav-list>
     <mat-nav-list>
       <a routerLink = "/contact" [class.mat-btn]="true" mat-list-item>Contact</a>

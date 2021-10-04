@@ -16,7 +16,7 @@ export class WomensMinistryComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   getData(){
-    const url = 'assets/_yth.json';
+    const url = 'assets/_wm.json';
     this.http.get(url).subscribe((res) => {
       this.data = res;
       // console.log(this.data);
