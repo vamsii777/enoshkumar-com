@@ -1,1 +1,64 @@
-<p>contact works!</p>
+<section>
+  <div fxHide.lt-md>
+    <h2 [class.sect-pry]="true" style="padding-top: 100px;">Contact</h2>
+    <p [class.sect-prydec]="true"> Get In Touch </p>
+    <div class="icon" fxLayout="row" fxLayoutAlign="space-around center" >
+
+      <div fxLayout="column" fxLayoutAlign="space-evenly center">
+        <mat-icon [inline]="true"> location_on</mat-icon>
+        <p [class.sect-condesc]="true"> Postal Address </p>
+        <p [class.sect-smcondesc]="true"> Bethel Prayer Felloship,</p>
+        <p [class.sect-smcondesc]="true">  Vijayawada - 520015 </p>
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="space-evenly center">
+        <mat-icon [inline]="true"> call</mat-icon>
+        <p [class.sect-condesc]="true"> Phone </p>
+        <p [class.sect-smcondesc]="true"> +91 9440585577 </p>
+        <p [class.sect-smcondesc]="true">  +91 9494515577 </p>
+      </div>
+
+      <div fxLayout="column" fxLayoutAlign="space-evenly center">
+        <mat-icon [inline]="true"> mail</mat-icon>
+        <p [class.sect-condesc]="true">  General Enquiries </p>
+        <p [class.sect-smcondesc]="true"> info@enoshkumar.com </p>
+        <p [class.sect-smcondesc]="true"> munnasv@yahoo.in </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div fxHide.gt-sm fxShow.lt-md >
+    <h2 [class.sect-pry]="true" style="padding-top: 100px;">Contact</h2>
+    <p [class.msect-prydec]="true"> Get In Touch </p>
+<!--    <p [class.sect-prydec]="true">  Get In Touch </p>-->
+    <div class="icon" style="padding-top: 25px; padding-bottom: 25px" fxLayout="column" fxLayoutGap="20px">
+
+      <div  fxLayout="column"  fxLayoutAlign="space-evenly center">
+        <mat-icon [inline]="true"> location_on</mat-icon>
+        <p [class.msect-condesc]="true"> Postal Address </p>
+        <p [class.msect-smcondesc]="true"> Bethel Prayer Felloship,</p>
+        <p [class.msect-smcondesc]="true">  Vijayawada - 520015 </p>
+      </div>
+
+      <div fxLayout="column"  style="padding-top: 25px;" fxLayoutAlign="space-evenly center">
+        <mat-icon [inline]="true"> call</mat-icon>
+        <p [class.msect-condesc]="true"> Phone </p>
+        <p [class.msect-smcondesc]="true"> +91 9440585577 </p>
+        <p [class.msect-smcondesc]="true">  +91 9494515577 </p>
+      </div>
+
+      <div fxLayout="column"  style="padding-top: 25px; padding-bottom: 50px" fxLayoutAlign="space-evenly center">
+        <mat-icon [inline]="true"> mail</mat-icon>
+        <p [class.msect-condesc]="true">  General Enquiries </p>
+        <p [class.msect-smcondesc]="true"> info@enoshkumar.com </p>
+        <p [class.msect-smcondesc]="true"> munnasv@yahoo.in </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
