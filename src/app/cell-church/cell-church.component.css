@@ -1,0 +1,27 @@
+.test {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/DSC00482.JPG');
+  position: absolute;
+  text-align: center;
+}
+
+
+.p-0{
+  font-family: 'Poppins';
+  font-size: 5vmax;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.mat-c{
+  height: 300px;
+  font-family: 'Poppins';
+  width: 500px;
+}
+
+.h4f{
+  font-family: 'Poppins';
+}
